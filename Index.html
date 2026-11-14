@@ -1,1 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CV Kreatif Solusi Instek - Rental, kalibrasi dan pemeliharaan alat ukur industri">
+<title>CV. Kreatif Solusi Instek</title>
 
+<style>
+:root {
+    --navy: #102d4f;
+    --blue: #000000;
+    --gold: #f2a900;
+    --light: #ffffff;
+    --text: #010203;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+.section-title p {
+    color: #718096;
+    max-width: 650px;
+    margin: 10px auto;
+}
+
+/* NAVBAR */
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo small {
+    display: block;
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+    linear-gradient(90deg, #081f37ed, #081f3770),
+    url("images/cover.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 70px 0;
+}
+
+.hero-content span {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: #e2eaf3;
+    font-size: 17px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 13px 24px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-white {
+    border: 1px solid white;
+    color: white;
+}
+
+/* PROFIL */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.about-text h2 {
+    color: var(--navy);
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #687789;
+    text-align: justify;
+    margin-bottom: 13px;
+}
+
+/* VISI MISI */
+.vision {
+    background: var(--light);
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.vm-card {
+    background: white;
+    padding: 35px;
+    border-top: 4px solid var(--blue);
+    box-shadow: 0 4px 18px #00000008;
+}
+
+.vm-card h3 {
+    color: var(--navy);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.vm-card p,
+.vm-card li {
+    color: #687789;
+}
+
+.vm-card ul {
+    padding-left: 20px;
+}
+
+/* LAYANAN */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    box-shadow: 0 4px 20px #00000010;
+    border-radius: 7px;
+    overflow: hidden;
+    background: white;
+}
+
+.service-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 22px;
+}
+
+.service-content h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #687789;
+    font-size: 14px;
+}
+
+/* PERALATAN */
+.inventory {
+    background: var(--light);
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.inventory-card {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000009;
+}
+
+.inventory-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.inventory-info {
+    border-top: 1px solid #eee;
+    padding: 20px;
+}
+
+.inventory-info h3 {
+    color: var(--navy);
+    font-size: 17px;
+}
+
+.inventory-info p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.quantity {
+    display: inline-block;
+    color: var(--blue);
+    background: #eaf3fb;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* TABEL */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 40px;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 14px 17px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    color: white;
+    background: var(--navy);
+}
+
+/* KEUNGGULAN */
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.advantage-card {
+    background: var(--light);
+    text-align: center;
+    padding: 28px 18px;
+    border-radius: 7px;
+}
+
+.advantage-card strong {
+    font-size: 30px;
+    color: var(--blue);
+}
+
+.advantage-card h3 {
+    color: var(--navy);
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.advantage-card p {
+    color: #687789;
+    font-size: 13px;
+}
+
+/* LEGALITAS */
+.legal {
+    background: var(--light);
+}
+
+.legal-box {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+}
+
+.legal-row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.legal-row strong {
+    color: var(--navy);
+}
+
+.legal-row span {
+    color: #687789;
+}
+
+/* KONTAK */
+.contact {
+    color: white;
+    background:
+    linear-gradient(#081f37ed, #081f37ed),
+    url("images/refinery.jpg") center/cover no-repeat;
+}
+
+.contact .section-title h2,
+.contact .section-title p {
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background: #ffffff12;
+    border: 1px solid #ffffff25;
+    padding: 25px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.contact-card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: white;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+footer {
+    background: #091d32;
+    color: #c4d0dc;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background: #20b85a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #0003;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .inventory-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .about-grid,
+    .vm-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .inventory-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .legal-row {
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGASI -->
+<header>
+<div class="container navbar">
+
+    <a href="#beranda" class="logo">
+        <img src="images/logo.jpg" alt="Logo KSI">
+        <div>
+            KREATIF SOLUSI INSTEK
+            <small>INSTRUMENT SOLUTION</small>
+        </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#visi">Visi & Misi</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#alat">Client</a></li>
+        <li><a href="#legalitas">Legalitas</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+</div>
+</header>
+
+<!-- BERANDA -->
+<section class="hero" id="beranda">
+<div class="container">
+    <div class="hero-content">
+        <span>INSTRUMENTATION & CALIBRATION SOLUTION</span>
+
+        <h1>Solusi Presisi dan Terpercaya untuk Kebutuhan Pengukuran Anda</h1>
+
+        <p>
+            CV. Kreatif Solusi Instek menyediakan layanan rental,
+            kalibrasi, dan pemeliharaan alat ukur untuk kebutuhan industri.
+        </p>
+
+        <div class="buttons">
+            <a href="#layanan" class="btn btn-gold">Lihat Layanan</a>
+            <a href="#kontak" class="btn btn-white">Hubungi Kami</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+<div class="container about-grid">
+
+    <div class="about-image">
+        <img src="images/tentang.jpg" alt="Profil Perusahaan">
+    </div>
+
+    <div class="about-text">
+        <h2>CV. Kreatif Solusi Instek</h2>
+
+        <p>
+            CV. Kreatif Solusi Instek merupakan perusahaan yang bergerak
+            di bidang penyewaan dan kalibrasi peralatan ukur instrumentasi
+            untuk mendukung kebutuhan berbagai sektor industri.
+        </p>
+
+        <p>
+            Berdiri pada tahun 2024 dan berlokasi di Cimahi, Jawa Barat,
+            kami berkomitmen memberikan solusi pengukuran yang akurat,
+            terpercaya, dan sesuai kebutuhan pelanggan.
+        </p>
+
+        <p>
+            Kami melayani kebutuhan industri pembangkit listrik,
+            pertambangan, minyak dan gas, serta industri kimia.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<!-- VISI MISI -->
+<section class="vision" id="visi">
+<div class="container">
+
+    <div class="section-title">
+        <span>KOMITMEN PERUSAHAAN</span>
+        <h2>Visi dan Misi</h2>
+    </div>
+
+    <div class="vm-grid">
+        <div class="vm-card">
+            <h3>Visi</h3>
+            <p>
+                Menjadi perusahaan penyedia jasa rental dan kalibrasi
+                alat ukur instrumentasi yang profesional, terpercaya,
+                dan menjadi pilihan utama bagi kebutuhan industri.
+            </p>
+        </div>
+
+        <div class="vm-card">
+            <h3>Misi</h3>
+            <ul>
+                <li>Menyediakan peralatan ukur berkualitas dan terawat.</li>
+                <li>Memberikan layanan kalibrasi yang akurat.</li>
+                <li>Mengutamakan kepuasan pelanggan.</li>
+                <li>Mengembangkan kompetensi dan pelayanan teknis.</li>
+                <li>Menjalin kerja sama jangka panjang.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan">
+<div class="container">
+
+    <div class="section-title">
+        <span>SOLUSI KAMI</span>
+        <h2>Layanan Perusahaan</h2>
+        <p>Solusi kebutuhan pengukuran dan instrumentasi industri.</p>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <img src="images/alat.jpg" alt="Rental Alat Ukur">
+            <div class="service-content">
+                <h3>Rental Alat Ukur</h3>
+                <p>
+                    Penyewaan peralatan instrumentasi dengan pilihan
+                    durasi harian, mingguan, bulanan, hingga kontrak tahunan.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/kalibrsi.jpg" alt="Kalibrasi">
+            <div class="service-content">
+                <h3>Kalibrasi Peralatan</h3>
+                <p>
+                    Layanan kalibrasi peralatan ukur untuk membantu
+                    menjaga akurasi dan keandalan hasil pengukuran.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/maintenace.jpg" alt="Maintenance">
+            <div class="service-content">
+                <h3>Maintenance & Technical Support</h3>
+                <p>
+                    Dukungan teknis dan pemeliharaan peralatan
+                    instrumentasi untuk kebutuhan industri.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- INVENTARIS -->
+<section class="inventory" id="alat">
+<div class="container">
+
+    <div class="section-title">
+        <h2>Client</h2>
+    </div>
+
+    <div class="inventory-grid">
+
+        <div class="inventory-card">
+            <img src="images/logo1.png" alt="Multimeter">
+        </div>
+
+        <div class="inventory-card">
+            <img src="images/logo2.jpg" alt="HART Communicator">
+        </div>
+
+        <div class="inventory-card">
+            <img src="images/logo 3.png" alt="Trex Communicator">
+        </div>
+
+</div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section id="keunggulan">
+<div class="container">
+
+    <div class="section-title">
+        <span>WHY CHOOSE US</span>
+        <h2>Keunggulan Kami</h2>
+    </div>
+
+    <div class="advantage-grid">
+
+        <div class="advantage-card">
+            <strong>01</strong>
+            <h3>Akurasi Peralatan</h3>
+            <p>Peralatan ukur untuk mendukung kebutuhan industri.</p>
+        </div>
+
+        <div class="advantage-card">
+            <strong>02</strong>
+            <h3>Dukungan Teknis</h3>
+            <p>Dukungan teknis untuk kebutuhan pelanggan.</p>
+        </div>
+
+        <div class="advantage-card">
+            <strong>03</strong>
+            <h3>Rental Fleksibel</h3>
+            <p>Pilihan durasi sewa sesuai kebutuhan proyek.</p>
+        </div>
+
+        <div class="advantage-card">
+            <strong>04</strong>
+            <h3>Pengiriman</h3>
+            <p>Dukungan pengiriman peralatan sesuai kesepakatan.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- LEGALITAS -->
+<section class="legal" id="legalitas">
+<div class="container">
+
+    <div class="section-title">
+        <span>COMPANY INFORMATION</span>
+        <h2>Legalitas Perusahaan</h2>
+    </div>
+
+    <div class="legal-box">
+
+        <div class="legal-row">
+            <strong>Nama Perusahaan</strong>
+            <span>CV. Kreatif Solusi Instek</span>
+        </div>
+
+        <div class="legal-row">
+            <strong>Akta Pendirian</strong>
+            <span>Akta No. 04 oleh Notaris Sonny Ario Sulaksono, S.H., M.Kn.</span>
+        </div>
+
+        <div class="legal-row">
+            <strong>SKT AHU</strong>
+            <span>AHU-0052600-AH.01.14 Tahun 2024</span>
+        </div>
+
+        <div class="legal-row">
+            <strong>NPWP</strong>
+            <span>12.924.449.7-421.000</span>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section class="contact" id="kontak">
+<div class="container">
+
+    <div class="section-title">
+        <span>CONTACT US</span>
+        <h2>Hubungi Kami</h2>
+        <p>Hubungi kami untuk informasi layanan dan penyewaan peralatan.</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <h3>Alamat</h3>
+            <p>
+                Jalan Kota Mas IX No. 16, RT 009/RW 010,
+                Kelurahan Padasuka, Kecamatan Cimahi Tengah,
+                Kota Cimahi, Jawa Barat.
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Telepon / WhatsApp</h3>
+            <p><a href="https://wa.me/628156444456">08156444456</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p>kreatifsulusi.teknik@gmail.com</p>
+            <p style="margin-top:8px;font-size:12px;">
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © <span id="year"></span>
+        <strong>CV. KREATIF SOLUSI INSTEK</strong>.
+        All Rights Reserved.
+    </p>
+    <p>Instrument Rental, Calibration & Technical Support</p>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/628156444456"
+   target="_blank"
+   rel="noopener">
+   WhatsApp Kami
+</a>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
